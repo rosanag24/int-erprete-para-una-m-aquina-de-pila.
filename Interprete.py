@@ -179,11 +179,11 @@ class Interprete:
                     break
             #verificamos cuantos componentes tiene el operador
             ins_parts[len(ins_parts)-1] = self.sin_salto(ins_parts[len(ins_parts)-1])
-            print(self.stack_op[PC])
-            print(self.rval)
-            print(self.labels)
-            print(self.lval)
-            print(self.stack)
+            #print(self.stack_op[PC])
+            #print(self.rval)
+            #print(self.labels)
+            #print(self.lval)
+            #print(self.stack)
             #CASO CON 1 SOLA ENTRADA
             if (len(ins_parts) == 1) and (ins_parts[0] in param_0):
                 if(ins_parts[0]=="RESET"):
