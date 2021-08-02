@@ -19,9 +19,9 @@ def main():
         archivo = open(filename)
         linea=archivo.readline()
         while (linea !=''):
-            Interprete.stack_op.append(linea)
+            stack.stack_op.append(linea)
             linea=archivo.readline()
-
+    stack.run()
 ##### VERIFICAR EL ORDEN DENTRO DE LA PILA ####
 #    for item in stack.stack_op:
 #        print(item)
