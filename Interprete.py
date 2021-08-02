@@ -125,12 +125,8 @@ class Interprete:
             return self.labels[lb]
 #GOFALSE:
     def GOFALSE(self, lb):
-        print(lb)
-        print(self.stack)
         p = self.stack.pop()
-        print(p)
         if (not p):
-            print("PASO")
             return self.labels[lb]
 #READ:
     def READ(self,id):
@@ -177,13 +173,15 @@ class Interprete:
             ins_parts = instruction.split(" ")
             if(ins_parts[0]=="EXIT" or ins_parts[0]=="EXIT\n"):
                     break
-            #verificamos cuantos componentes tiene el operador
-            ins_parts[len(ins_parts)-1] = self.sin_salto(ins_parts[len(ins_parts)-1])
+            #verificamos si el ultimo elemento tiene o no salto de linea para eliminarlo
+            if("\n" in ins_parts[len(ins_parts)-1]): 
+                ins_parts[len(ins_parts)-1] = self.sin_salto(ins_parts[len(ins_parts)-1])
             #print(self.stack_op[PC])
             #print(self.rval)
             #print(self.labels)
             #print(self.lval)
             #print(self.stack)
+            #verificamos cuantos componentes tiene el operador
             #CASO CON 1 SOLA ENTRADA
             if (len(ins_parts) == 1) and (ins_parts[0] in param_0):
                 if(ins_parts[0]=="RESET"):
