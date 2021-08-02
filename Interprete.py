@@ -74,7 +74,6 @@ class Interprete:
     def LE(self):
         i1 = self.stack.pop()
         i2 = self.stack.pop()
-        print(self.stack)
         self.stack.append(int(i1)<=int(i2))
 #GT:
     def GT(self):
