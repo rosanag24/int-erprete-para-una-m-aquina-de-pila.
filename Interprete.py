@@ -20,14 +20,17 @@ class Interprete:
             PC = PC + 1
 #PUSH:
     def PUSH(self, item):
-        if (item == "true" or item =="false"):
-            self.stack.append(bool(item))
+        print("ENTRA")
+        if (item == "true"):
+            self.stack.append(True)
         else:
-            if(item.isdigit()):
-               self.stack.append(int(item)) 
+            if (item =="false"):
+                self.stack.append(False)
             else:
-                print("INVALID INPUT")
-                return False
+                if(item.isdigit()):
+                    self.stack.append(int(item)) 
+                else:
+                    print("INVALID INPUT")
 #POP:
     def POP(self):
         self.stack.pop()
@@ -176,11 +179,11 @@ class Interprete:
                     break
             #verificamos cuantos componentes tiene el operador
             ins_parts[len(ins_parts)-1] = self.sin_salto(ins_parts[len(ins_parts)-1])
-            #print(self.stack_op[PC])
-            #print(self.rval)
-            #print(self.labels)
-            #print(self.lval)
-            #print(self.stack)
+            print(self.stack_op[PC])
+            print(self.rval)
+            print(self.labels)
+            print(self.lval)
+            print(self.stack)
             #CASO CON 1 SOLA ENTRADA
             if (len(ins_parts) == 1) and (ins_parts[0] in param_0):
                 if(ins_parts[0]=="RESET"):
