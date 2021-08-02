@@ -1,0 +1,8 @@
+PUSH false
+PUSH true
+NOT
+AND
+LVALUE a
+ASSIGN
+PRINT a
+EXIT

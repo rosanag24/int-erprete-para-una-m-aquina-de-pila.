@@ -1,0 +1,11 @@
+READ a
+READ b
+RVALUE a
+RVALUE b
+LE
+GOTRUE gt
+PRINT a
+GOTO end
+gt: PRINT c
+GOTO end
+end: PUSH 0

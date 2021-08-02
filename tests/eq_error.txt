@@ -1,0 +1,7 @@
+PUSH false
+PUSH 23
+EQ
+LVALUE a
+ASSIGN
+PRINT a
+EXIT
